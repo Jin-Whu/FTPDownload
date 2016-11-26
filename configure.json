@@ -1,0 +1,46 @@
+{
+  "NAV":
+  {
+    "GPS":
+    {
+      "ftp":["ftp://igs.bkg.bund.de/NTRIP/BRDC", "ftp://cddis.gsfc.nasa.gov/gps/data/daily"],
+      "year":[true, true],
+      "doy":[true, true],
+      "nav":[false,true],
+      "zip":[true, true],
+      "path":"/home/xyjin",
+      "interval":600
+    },
+    "BDS":
+    {
+      "ftp":[],
+      "year":[],
+      "doy":[],
+      "nav":[],
+      "zip":[],
+      "path":"",
+      "interval":0
+    },
+    "GLO":
+    {
+      "ftp":[],
+      "year":[],
+      "doy":[],
+      "nav":[],
+      "zip":[],
+      "path":"",
+      "interval":0
+
+    },
+    "GAL":
+    {
+      "ftp":[],
+      "year":[],
+      "doy":[],
+      "nav":[],
+      "zip":[],
+      "path":"",
+      "interval":0
+    }
+  }
+}
