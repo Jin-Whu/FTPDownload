@@ -16,7 +16,7 @@
 
 各个导航系统内的配置有 **ftp**, **year**, **doy**, **nav**, **zip**, **path**, **interval**, 下面进行说明：
 
-1. **ftp**：为文件下载地址，例如"ftp://igs.bkg.bund.de/NTRIP/BRDC"，根据 **year**, **doy**, **nav** 的选择，来判断完整路径
+1. **ftp**：为文件下载地址，例如"ftp://igs.bkg.bund.de/NTRIP/BRDC"
 2. **year**：**ture** 或者 **false**，表明在ftp下级目录是否为年份
 3. **doy**：**true** 或者 **false**，表明在ftp下级目录是否为年积日
 4. **nav**: **true** 或者 **false**，表明ftp下级目录是否为 **n** 文件夹，即 **年份+n**，例如 **16n**
@@ -30,3 +30,10 @@
 2. **year**, **doy**, **nav**, **zip** 的取值只能为 **ture** 或者 **false**
 3. **path** 必须用 **""** 字符串符号包括，在 **windows** 下的路径地址使用双斜杠,例如 **"E:\\\"**
 4. 当 **path** 为空字符串 **""**, 或者 **interval** 为0时，不下载该导航系统的星历
+
+## 使用方法
+
+本脚本有两种使用方式，前台运行或者后台运行
+
+- 前台运行：在 **cmd** 或者 **shell** 环境下，执行`python download.py`命令
+- 后台运行：linux系统执行`nohup python download.py &`命令
