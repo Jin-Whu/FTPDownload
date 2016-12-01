@@ -9,7 +9,8 @@
       "nav":[false,true],
       "zip":[true, true],
       "path":"",
-      "interval":600
+      "interval":600,
+      "generator":""
     },
     "BDS":
     {
@@ -19,7 +20,8 @@
       "nav":[],
       "zip":[],
       "path":"",
-      "interval":0
+      "interval":0,
+      "generator":""
     },
     "GLO":
     {
@@ -29,8 +31,8 @@
       "nav":[],
       "zip":[],
       "path":"",
-      "interval":0
-
+      "interval":0,
+      "generator":""
     },
     "GAL":
     {
@@ -40,7 +42,8 @@
       "nav":[],
       "zip":[],
       "path":"",
-      "interval":0
+      "interval":0,
+      "generator":
     }
   }
 }

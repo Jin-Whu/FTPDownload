@@ -126,6 +126,11 @@ class Download(object):
                         continue
                     brdcpath = brdcpath[:-2]
                 if os.path.isfile(brdcpath) and os.path.getsize(brdcpath):
+                    generator = cfg['generator']
+                    if not generator:
+                        logging.error('No generator!')
+                        break
+                    subprocess.call([generator, storepath, str(year), str(doy)])
                     break
 
             time.sleep(interval)
