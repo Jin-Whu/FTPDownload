@@ -127,10 +127,14 @@ class Download(object):
                     brdcpath = brdcpath[:-2]
                 if os.path.isfile(brdcpath) and os.path.getsize(brdcpath):
                     generator = cfg['generator']
-                    if not generator:
-                        logging.error('No generator!')
+                    if not os.path.exists(generator):
+                        NAVloger.error('No generator!')
                         break
-                    subprocess.call([generator, storepath, str(year), str(doy)])
+                    try:
+                        subprocess.call(
+                            [generator, storepath, str(year), str(doy)])
+                    except:
+                        NAVloger.error('Generator failed!')
                     break
 
             time.sleep(interval)
