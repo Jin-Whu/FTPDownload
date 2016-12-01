@@ -131,8 +131,13 @@ class Download(object):
                         NAVloger.error('No generator!')
                         break
                     try:
-                        subprocess.call(
-                            [generator, storepath, str(year), str(doy)])
+                        args = ['./generator', storepath, str(year), str(doy)]
+                        p = subprocess.Popen(
+                            args,
+                            cwd=generator,
+                            stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE)
+                        p.communicate()
                     except:
                         NAVloger.error('Generator failed!')
                     break
